@@ -8,6 +8,7 @@ const Contact = ({ contact }) => {
   const dispatch = useDispatch();
 
   const onDelete = () => dispatch(deleteContact(contact.id));
+
   return (
     <div className={css.contact}>
       <div className={css.contactData}>
@@ -20,7 +21,7 @@ const Contact = ({ contact }) => {
           <p>{contact.number}</p>
         </div>
       </div>
-      <button type="button" onClick={() => onDelete(contact.id)}>
+      <button type="button" onClick={onDelete}>
         Delete
       </button>
     </div>
