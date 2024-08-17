@@ -6,12 +6,12 @@ const filtersSlice = createSlice({
     name: "",
   },
   reducers: {
-    setStatusFilter(state, action) {
+    changeFilter(state, action) {
       state.name = action.payload;
     },
   },
 });
 
 // Експортуємо генератори екшенів та редюсер
-export const { setStatusFilter } = filtersSlice.actions;
+export const { changeFilter } = filtersSlice.actions;
 export const filtersReducer = filtersSlice.reducer;
